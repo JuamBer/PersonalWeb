@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Tool } from 'src/models/tool.model';
 
 @Component({
   selector: 'app-tools',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolsComponent implements OnInit {
 
+  tools: Tool[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.tools.push({
+      name: 'VSCODE'
+    });
   }
 
 }

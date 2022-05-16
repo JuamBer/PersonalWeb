@@ -6,7 +6,6 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { AbilitiesComponent } from './components/abilities/abilities.component';
 import { LanguagesComponent } from './components/languages/languages.component';
-import { ToolsComponent } from './components/tools/tools.component';
 
 
 @NgModule({
@@ -15,7 +14,6 @@ import { ToolsComponent } from './components/tools/tools.component';
     LayoutComponent,
     AbilitiesComponent,
     LanguagesComponent,
-    ToolsComponent,
   ],
   imports: [
     CommonModule,
