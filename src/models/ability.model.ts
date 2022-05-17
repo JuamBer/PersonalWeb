@@ -1,4 +1,4 @@
-export interface Tool {
+export interface Ability {
   name: string;
   ability: number;
 }

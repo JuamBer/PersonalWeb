@@ -1,7 +1,12 @@
 <div class="tools">
   <ul>
-    <li *ngFor="let tool of tools">
-      {{tool.name}}
+    <li *ngFor="let entity of entities" class="tool">
+      <span class="name">
+        {{entity.name}}
+      </span>
+      <span class="ability">
+        <progress [value]="entity.ability" max="100"></progress>
+      </span>
     </li>
   </ul>
 </div>

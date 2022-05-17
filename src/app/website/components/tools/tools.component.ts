@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Tool } from 'src/models/tool.model';
 
 @Component({
@@ -8,14 +8,11 @@ import { Tool } from 'src/models/tool.model';
 })
 export class ToolsComponent implements OnInit {
 
-  tools: Tool[] = [];
+  @Input() entities: any[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
-    this.tools.push({
-      name: 'VSCODE'
-    });
   }
 
 }

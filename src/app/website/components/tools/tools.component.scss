@@ -1,0 +1,50 @@
+.tools {
+   ul {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 10px;
+   }
+
+  .tool {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: repeat(1, 100%);
+
+    .name {
+      font-size: 18px;
+      padding-bottom: 2.5px;
+    }
+    .ability {
+      width: 90%;
+
+      progress {
+        width: 100%;
+        height: 15px;
+        border: 0;
+        border-radius: 5px;
+      }
+      progress::-webkit-progress-bar {
+        width: 100%;
+        height: 15px;
+        border: 1px solid none;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.763);
+      }
+
+      progress::-webkit-progress-value {
+        width: 100%;
+        height: 15px;
+        border-radius: 5px;
+        background-color: rgb(42, 166, 77);
+      }
+
+      progress::-moz-progress-bar {
+        width: 100%;
+        height: 15px;
+        border: 0;
+        border-radius: 5px;
+        background-color: rgb(215, 215, 215);
+      }
+    }
+  }
+}

@@ -1,6 +1,21 @@
 .home {
-  display: flex;
-  justify-content: center;
+    .container {
+      display: flex;
+      justify-content: center;
+      background: #77D97F;
+      width: 100%;
+      padding: 2.5%;
+    }
 
+    .container-info {
+      width: 100%;
+      max-width: 1500px;
+
+      .title {
+        font-size: 30px;
+        font-weight: bold;
+        padding-bottom: 15px;
+      }
+    }
 
 }
