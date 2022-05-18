@@ -1,1 +1,9 @@
-<p>sidebar works!</p>
+<header>
+  <nav>
+    <ul>
+      <li *ngFor="let page of pages">
+        <a [routerLink]="'/'+page.name">{{page.name | titlecase}}</a>
+      </li>
+    </ul>
+  </nav>
+</header>

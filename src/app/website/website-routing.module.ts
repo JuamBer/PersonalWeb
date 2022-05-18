@@ -28,6 +28,10 @@ const routes: Routes = [
         loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule),
       },
       {
+        path: 'certificates',
+        loadChildren: () => import('./pages/certificates/certificates.module').then(m => m.CertificatesModule),
+      },
+      {
         path: '',
         redirectTo: '/home',
         pathMatch: 'full'
