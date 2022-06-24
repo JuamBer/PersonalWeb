@@ -1,0 +1,94 @@
+.contact {
+  width: 90%;
+  padding: 5%;
+
+  div.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1%;
+  }
+
+  .rrss {
+    ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+        a {
+          text-decoration: none;
+
+        }
+
+        i {
+          color: black;
+        }
+
+    }
+  }
+
+  mat-card {
+    width: 100%;
+    max-width: 1000px;
+
+    mat-card-title {
+      width: calc(100% - 20px);
+      margin: 10px;
+      margin-bottom: 2.5%;
+      font-size: 30px;
+    }
+
+    form {
+      width: 100%;
+
+      div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        mat-form-field {
+          width: calc(100% - 20px);
+          margin: 10px;
+
+          input {
+            width: 100%;
+          }
+
+          textarea {
+            min-height: 150px;
+          }
+
+          ::ng-deep .mat-focused .mat-form-field-label {
+            /*change color of label*/
+            color: #4A9E98 !important;
+          }
+
+          ::ng-deep.mat-form-field-underline {
+            /*change color of underline*/
+            background-color: #4A9E98 !important;
+          }
+
+          ::ng-deep.mat-form-field-ripple {
+            /*change color of underline when focused*/
+            background-color: #4A9E98 !important;
+            ;
+          }
+        }
+      }
+
+
+      div.buttons {
+        display: flex;
+        justify-content: flex-end;
+        width: calc(100% - 20px);
+        margin: 10px;
+
+        button {
+          min-width: 100px;
+          background: #4A9E98;
+          color: white;
+        }
+      }
+    }
+  }
+
+}

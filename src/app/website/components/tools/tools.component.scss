@@ -13,6 +13,7 @@
     .name {
       font-size: 18px;
       padding-bottom: 2.5px;
+        color: black;
     }
     .ability {
       width: 90%;
@@ -28,14 +29,14 @@
         height: 15px;
         border: 1px solid none;
         border-radius: 5px;
-        background-color: rgba(255, 255, 255, 0.763);
+        background-color: #CECFD3;
       }
 
       progress::-webkit-progress-value {
         width: 100%;
         height: 15px;
         border-radius: 5px;
-        background-color: rgb(42, 166, 77);
+        background-color: #4A9E98;
       }
 
       progress::-moz-progress-bar {
@@ -43,7 +44,7 @@
         height: 15px;
         border: 0;
         border-radius: 5px;
-        background-color: rgb(215, 215, 215);
+        background-color: #CECFD3;
       }
     }
   }

@@ -1,1 +1,8 @@
-<p>experience works!</p>
+<div class="experience">
+  <ul>
+    <li *ngFor="let experience of experiences.reverse()">
+      {{experience.organization}}
+
+    </li>
+  </ul>
+</div>

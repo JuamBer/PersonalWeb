@@ -2,5 +2,9 @@
   "home": {
     "title": "Translation demo",
     "text": "This is a simple demonstration app for ngx-translate"
+  },
+  "contact": {
+    "title": "¡ Escríbeme ! ",
+    "rrss": "Redes Sociales"
   }
 }

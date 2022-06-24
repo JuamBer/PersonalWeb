@@ -1,8 +1,21 @@
 <header>
+  <div class="me">
+    <div>
+      <img src="assets/img/me.jpg" alt="Juan">
+    </div>
+
+    <div>
+      <h1>Juan Sáez García</h1>
+    </div>
+
+    <div>
+      <span>Desarrollador De Aplicaciones Web</span>
+    </div>
+  </div>
   <nav>
     <ul>
       <li *ngFor="let page of pages">
-        <a [routerLink]="'/'+page.name">{{page.name | titlecase}}</a>
+        <a [routerLink]="'/'+page.page" routerLinkActive="active">{{page.name | titlecase}}</a>
       </li>
     </ul>
   </nav>

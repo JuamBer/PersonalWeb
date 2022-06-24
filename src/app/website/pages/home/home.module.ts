@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { ToolsComponent } from '../../components/tools/tools.component';
+import { ExperienceComponent } from '../../components/experience/experience.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
-    ToolsComponent
+    ToolsComponent,
+    ExperienceComponent
   ],
   imports: [
     CommonModule,

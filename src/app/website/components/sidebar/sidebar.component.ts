@@ -10,13 +10,24 @@ export class SidebarComponent implements OnInit {
 
   pages: Page[] = [
     {
-      name: "home"
+      name: "Resumen",
+      page: "home"
     },
     {
-      name: "contact"
+      name: "Contacto",
+      page: "contact"
     },
     {
-      name: "certificates"
+      name: "Proyectos",
+      page: "proyects"
+    },
+    {
+      name: "Hardware",
+      page: "hardware"
+    },
+    {
+      name: "Certificados",
+      page: "certificates"
     }
   ];
 
