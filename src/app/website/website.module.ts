@@ -6,7 +6,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { AbilitiesComponent } from './components/abilities/abilities.component';
 import { LanguagesComponent } from './components/languages/languages.component';
-
+import { CvComponent } from './components/cv/cv.component';
 
 @NgModule({
   declarations: [

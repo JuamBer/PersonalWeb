@@ -14,6 +14,7 @@ export class ExperienceComponent implements OnInit {
       organization: "Jesus María Fuensanta",
       items: [
         {
+          position: "ESO, Ciencias",
           startDate: new Date(2014, 1, 1),
           endDate: new Date(2020, 1, 1)
         }
@@ -24,6 +25,7 @@ export class ExperienceComponent implements OnInit {
       organization: "IES Rascanya",
       items: [
         {
+          position: "Bachillerato Tecnológico",
           startDate: new Date(2018, 1, 1),
           endDate: new Date(2020, 1, 1)
         }
@@ -34,6 +36,7 @@ export class ExperienceComponent implements OnInit {
       organization: "IES Abastos",
       items: [
         {
+          position: "Desarrollo De Aplicaciones Multiplataforma",
           startDate: new Date(2020, 1, 1),
           endDate: new Date(2022, 1, 1)
         }

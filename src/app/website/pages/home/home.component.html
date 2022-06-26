@@ -1,9 +1,30 @@
 <div class="home">
   <div class="container">
     <div class="container-info">
-      <app-experience></app-experience>
+      <div class="item vertical">
+        <div class="vertical-item">
+          <div class="title">
+            <h3>Currículum</h3>
+          </div>
+          <app-cv></app-cv>
+        </div>
+       <div class="vertical-item">
+         <div class="title">
+           <h3>Perfiles</h3>
+         </div>
+         <app-rrss [rrss]="rrss"></app-rrss>
+       </div>
+      </div>
+      <div class="item">
+        <div class="title">
+          <h3>Trayectoria</h3>
+        </div>
+        <app-experience></app-experience>
+      </div>
+
     </div>
   </div>
+
   <div class="container">
     <div class="container-info">
       <div class="title">
@@ -31,4 +52,3 @@
     </div>
   </div>
 </div>
-

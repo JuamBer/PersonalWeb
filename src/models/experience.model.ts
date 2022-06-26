@@ -1,8 +1,8 @@
 export enum TypeExperience {
-  EDUCATION,
-  JOB,
-  VOLUNTEERING,
-  FREELANCER
+  EDUCATION = 'EDUCATION',
+  JOB = 'JOB',
+  VOLUNTEERING = 'VOLUNTEERING',
+  FREELANCER = 'FREELANCER'
 }
 
 interface Item {

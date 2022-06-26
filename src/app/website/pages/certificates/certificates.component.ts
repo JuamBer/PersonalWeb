@@ -1,5 +1,6 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { RutaService } from 'src/app/services/ruta.service';
+import { CertificacionService } from 'src/app/services/certificacion.service';
 import { Certificate } from 'src/models/certificate.model';
 
 @Component({
@@ -13,58 +14,21 @@ export class CertificatesComponent implements OnInit {
 
   ];
   items: any[] = [];
-  entities: Certificate[] = [
-    {
-      name: "Angular Router",
-      url: "https://raw.githubusercontent.com/JuamBer/Platzi-CursoAngularRouter/master/img-licencia/diploma-angular-modular.jpg"
-    },
-    {
-      name: "Angular Router",
-      url: "https://raw.githubusercontent.com/JuamBer/Platzi-CursoAngularRouter/master/img-licencia/diploma-angular-modular.jpg"
-    },
-    {
-      name: "Angular Router",
-      url: "https://raw.githubusercontent.com/JuamBer/Platzi-CursoAngularRouter/master/img-licencia/diploma-angular-modular.jpg"
-    },
-    {
-      name: "Angular Router",
-      url: "https://raw.githubusercontent.com/JuamBer/Platzi-CursoAngularRouter/master/img-licencia/diploma-angular-modular.jpg"
-    },
-    {
-      name: "Angular Router",
-      url: "https://raw.githubusercontent.com/JuamBer/Platzi-CursoAngularRouter/master/img-licencia/diploma-angular-modular.jpg"
-    },
-    {
-      name: "Angular Router",
-      url: "https://raw.githubusercontent.com/JuamBer/Platzi-CursoAngularRouter/master/img-licencia/diploma-angular-modular.jpg"
-    }
-  ];
+  entities: Certificate[] = [];
 
   constructor(
-    private rutaService: RutaService
+    private certificateSrv: CertificacionService
   ) { }
 
   ngOnInit(): void {
-    this.rutaService.listAllItemsObservable("certificados/rutas-de-aprendizaje/");
-    this.rutaService.itemsSubject.subscribe((items: any[]) => {
+    this.certificateSrv.getCertificacionesRuta().subscribe(res =>{
+      console.log(res);
 
-      // let aux: any[] = [];
-      // items.forEach(item=> {
-      //   if(!this.items.find(i => i.name === item.name)){
-      //     item.getDownloadURL().then((url: string) => {
-      //       aux.push({
-      //         name: item.name,
-      //         url: url,
-      //         type: item.name.split(".").pop()
-      //       })
-      //       console.log(aux);
+    })
 
-      //     })
-      //   }
-      // })
-      console.log(items);
+    this.certificateSrv.getCertificacionesOficiales().subscribe(res => {
+      console.log(res);
 
-      this.items = items;
     })
   }
 

@@ -1,8 +1,27 @@
 <div class="experience">
   <ul>
     <li *ngFor="let experience of experiences.reverse()">
-      {{experience.organization}}
-
+      <div class="header">
+        <div class="icon">
+          <i *ngIf="experience.type == 'EDUCATION'" class="fa-solid fa-graduation-cap"></i>
+          <i *ngIf="experience.type == 'JOB'" class="fa-solid fa-briefcase"></i>
+        </div>
+        <div class="organization">
+          <h3>{{experience.organization}}</h3>
+        </div>
+      </div>
+      <div class="items">
+        <ul>
+          <li class="item" *ngFor="let item of experience.items.reverse()">
+            <div *ngIf="item.position" class="position">
+              <span>{{item.position}}</span>
+            </div>
+            <div class="date">
+              <span>{{(item.startDate | date: 'MM-yyyy') + " - " + (item.endDate ? (item.endDate | date: 'MM-yyyy') : "Actualidad")}}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
     </li>
   </ul>
 </div>

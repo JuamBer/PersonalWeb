@@ -14,6 +14,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RRSSModule } from '../../components/rrss/rrss.module';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -29,6 +30,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     ContactRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    RRSSModule,
 
     MatFormFieldModule,
     MatInputModule,

@@ -6,5 +6,10 @@
   "contact": {
     "title": "¡ Escríbeme ! ",
     "rrss": "Redes Sociales"
+  },
+  "cv": {
+    "title": "Escríbeme Un Correo",
+    "button": "Descargar Currículum",
+    "info": "Desarcarga mi último currículum resumido en una página en formato pdf"
   }
 }

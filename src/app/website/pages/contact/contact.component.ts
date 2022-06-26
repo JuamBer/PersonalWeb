@@ -41,6 +41,11 @@ export class ContactComponent implements OnInit {
       name: "StackOverflow",
       url: "https://stackoverflow.com/users/8794462/juamber?tab=profile",
       icon: "fa-brands fa-stack-overflow"
+    },
+    {
+      name: "YouTube",
+      url: "https://www.youtube.com/channel/UCnwQce1OREgFG9Mve5oHlMg/playlists?view_as=subscriber",
+      icon: "fa-brands fa-youtube"
     }
   ];
 

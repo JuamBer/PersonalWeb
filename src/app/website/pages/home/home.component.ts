@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Ability } from 'src/models/ability.model';
+import { RedSocial } from 'src/models/red-social.model';
 import { Tool } from 'src/models/tool.model';
 
 @Component({
@@ -88,6 +89,39 @@ export class HomeComponent implements OnInit {
       name: 'Catalán',
       ability: 55
     },
+  ];
+
+  rrss: RedSocial[] = [
+    {
+      name: "GitHub",
+      url: "https://github.com/JuamBer",
+      icon: "fa-brands fa-github"
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/juamber/",
+      icon: "fa-brands fa-linkedin"
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/juamber/",
+      icon: "fa-brands fa-instagram"
+    },
+    {
+      name: "Twitter",
+      url: "https://twitter.com/JuanSaezGarcia",
+      icon: "fa-brands fa-twitter"
+    },
+    {
+      name: "StackOverflow",
+      url: "https://stackoverflow.com/users/8794462/juamber?tab=profile",
+      icon: "fa-brands fa-stack-overflow"
+    },
+    {
+      name: "YouTube",
+      url: "https://www.youtube.com/channel/UCnwQce1OREgFG9Mve5oHlMg/playlists?view_as=subscriber",
+      icon: "fa-brands fa-youtube"
+    }
   ];
 
   constructor() { }
