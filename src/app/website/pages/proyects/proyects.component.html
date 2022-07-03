@@ -1,1 +1,20 @@
-<p>proyects works!</p>
+<div class="proyects">
+  <div class="proyect" *ngFor="let proyecto of proyectos">
+    <div class="top">
+      <h2>{{proyecto.nombre}}</h2>
+    </div>
+    <div class="bottom">
+      <div class="left">
+        <img src="{{proyecto.logo}}" alt="{{proyecto.nombre}}">
+      </div>
+      <div class="right">
+        <p>{{proyecto.descripcion}}</p>
+        <div class="buttons">
+          <div class="button" *ngFor="let button of proyecto.enlaces | keyvalue">
+            <a href="{{button.value}}" target="_blank">{{button.key | titlecase}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
