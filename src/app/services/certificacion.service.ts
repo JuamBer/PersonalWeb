@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { Observable, reduce } from 'rxjs';
+import { map, Observable, pluck, reduce } from 'rxjs';
 import { Certificate } from 'src/models/certificate.model';
 
 @Injectable({
@@ -12,8 +12,8 @@ export class CertificacionService {
     private firestore: AngularFirestore
   ) { }
 
-  getCertificacionesOficiales() {
-    return this.firestore.collection('certificados', ref => ref.where('type', '==', 'formacion')).get();
+  getCertificacionesOficiales(): Observable<any> {
+    return this.firestore.collection('certificados', ref => ref.where('type', '==', 'oficial')).valueChanges({ idField: 'id' }).pipe(map(x => x[0]),pluck('certificados'));
   }
 
   getCertificacionesIndividuales() {

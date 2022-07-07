@@ -3,17 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { CertificatesRoutingModule } from './certificates-routing.module';
 import { CertificatesComponent } from './certificates.component';
-import { SafePipe } from 'src/app/pipes/safe.pipe';
+import { PipesModule } from 'src/app/pipes/pipes.module';
 
 
 @NgModule({
   declarations: [
     CertificatesComponent,
-    SafePipe
   ],
   imports: [
     CommonModule,
-    CertificatesRoutingModule
+    CertificatesRoutingModule,
+    PipesModule
   ]
 })
 export class CertificatesModule { }

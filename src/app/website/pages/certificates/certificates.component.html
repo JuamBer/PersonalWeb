@@ -4,11 +4,24 @@
       <div class="title">
         <h3>Formación Académica</h3>
       </div>
-      <div class="certificates-list">
+      <div class="certificates-list three">
         <ul>
-          <li *ngFor="let entity of entities" class="certificate">
+          <li *ngFor="let certificado of (formacionAcademica$ | async)" class="certificate">
+            <div class="info">
+              <div class="title">
+                <h4>{{certificado.nombre}}</h4>
+              </div>
+              <div class="institucion">
+                <h5>{{certificado.institucion}}</h5>
+              </div>
+            </div>
             <span class="img">
-              <img [src]="entity.url" [alt]="entity.name" />
+              <img [src]="certificado.img" [alt]="certificado.nombre" />
+              <div class="ver">
+                <a [href]="certificado.pdf" target="_blank">
+                  <i class="fa-solid fa-eye"></i>
+                </a>
+              </div>
             </span>
           </li>
         </ul>
@@ -24,7 +37,7 @@
         <ul>
           <li *ngFor="let entity of entities" class="certificate">
             <span class="img">
-              <img [src]="entity.url" [alt]="entity.name" />
+              <img [src]="entity.img" [alt]="entity.nombre" />
             </span>
           </li>
         </ul>

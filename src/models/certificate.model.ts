@@ -1,4 +1,6 @@
 export interface Certificate {
-  name: string;
-  url: string;
+  nombre: string;
+  institución: string;
+  img: string;
+  pdf: string;
 }

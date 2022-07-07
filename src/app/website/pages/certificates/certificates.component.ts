@@ -1,5 +1,8 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { Observable} from 'rxjs';
+import { map, pluck } from 'rxjs/operators';
+
 import { CertificacionService } from 'src/app/services/certificacion.service';
 import { Certificate } from 'src/models/certificate.model';
 
@@ -10,9 +13,7 @@ import { Certificate } from 'src/models/certificate.model';
 })
 export class CertificatesComponent implements OnInit {
 
-  formacionAcademica: Certificate[] = [
-
-  ];
+  formacionAcademica$: Observable<any> = this.certificateSrv.getCertificacionesOficiales();
   items: any[] = [];
   entities: Certificate[] = [];
 
@@ -21,15 +22,7 @@ export class CertificatesComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.certificateSrv.getCertificacionesRuta().subscribe(res =>{
-      console.log(res);
-
-    })
-
-    this.certificateSrv.getCertificacionesOficiales().subscribe(res => {
-      console.log(res);
-
-    })
+    this.formacionAcademica$.subscribe(console.log)
   }
 
 }

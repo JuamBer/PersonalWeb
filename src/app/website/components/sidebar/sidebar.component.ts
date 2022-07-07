@@ -14,10 +14,6 @@ export class SidebarComponent implements OnInit {
       page: "home"
     },
     {
-      name: "Contacto",
-      page: "contact"
-    },
-    {
       name: "Proyectos",
       page: "proyects"
     },

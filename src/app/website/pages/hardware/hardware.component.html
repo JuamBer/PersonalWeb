@@ -1,1 +1,37 @@
-<p>hardware works!</p>
+<div class="hardware">
+  <div class="item" *ngFor="let item of items">
+    <div class="top">
+      <div class="title">
+        <h2>{{item.nombre}}</h2>
+      </div>
+      <div class="description">
+        <p>{{item.descripcion}}</p>
+      </div>
+    </div>
+    <div class="bottom" *ngIf="item.fotos || item.videos || item.componentes">
+      <div class="left">
+        <div class="fotos" *ngIf="item.fotos">
+          <div class="foto" *ngFor="let foto of item.fotos">
+            <img src="{{foto}}" alt="">
+          </div>
+        </div>
+        <div class="videos" *ngIf="item.videos">
+          <div class="video" *ngFor="let video of item.videos">
+            <iframe [src]="video | safe">
+            </iframe>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="components" *ngIf="item.componentes">
+          <ul>
+            <li class="title">{{'hardware.componentes' | translate}}</li>
+            <li *ngFor="let componenete of item.componentes">
+              {{componenete}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
