@@ -12,7 +12,11 @@
         margin-bottom: 15%;
       }
 
-      .title {
+
+    }
+
+}
+.title {
         font-size: 30px;
         font-weight: bold;
         padding-bottom: 15px;
@@ -23,6 +27,29 @@
           font-weight: bold;
         }
       }
+
+@media screen and (max-width: 800px) {
+  .container-info {
+    width: 100% !important;
+    .item {
+      width: 100% !important;
     }
+  }
+
+  .title {
+    font-size: 20px;
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  .container-info {
+    .item {
+      padding-right: 0 !important;
+    }
+  }
+
+
+
 
 }

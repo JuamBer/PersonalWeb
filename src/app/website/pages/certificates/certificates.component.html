@@ -1,10 +1,10 @@
 <div class="certificates">
-  <div class="container">
+  <div class="container" style="margin-bottom: 30px;">
     <div class="container-info">
       <div class="title">
         <h3>Formación Académica</h3>
       </div>
-      <div class="certificates-list three">
+      <div class="certificates-list two">
         <ul>
           <li *ngFor="let certificado of (formacionAcademica$ | async)" class="certificate">
             <div class="info">
@@ -28,18 +28,33 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container cr">
     <div class="container-info">
       <div class="title">
         <h3>Rutas De Aprendizaje</h3>
       </div>
-      <div class="certificates-list">
-        <ul>
-          <li *ngFor="let entity of entities" class="certificate">
-            <span class="img">
-              <img [src]="entity.img" [alt]="entity.nombre" />
-            </span>
-          </li>
+      <div class="ruta-list">
+        <ul *ngFor="let ruta of (rutas$ | async)" class="ruta">
+          <div class="info">
+            <div class="title">
+              <h4>{{ruta.nombre}}</h4>
+            </div>
+            <div class="institucion">
+              <h5>{{ruta.institucion}}</h5>
+            </div>
+          </div>
+          <div class="certificados">
+            <li *ngFor="let certificate of ruta.certificados" class="certificate">
+              <span class="img">
+                <img [src]="certificate.img" [alt]="certificate.nombre" />
+              </span>
+              <div class="ver">
+                <a [href]="certificate.pdf" target="_blank">
+                  <i class="fa-solid fa-eye"></i>
+                </a>
+              </div>
+            </li>
+          </div>
         </ul>
       </div>
     </div>
@@ -51,14 +66,16 @@
       </div>
       <div class="certificates-list">
         <ul>
-          <div *ngFor="let item of items">
-            <li class="certificate">
-              <span class="img" *ngIf="item.jpg">
-                <img [src]="item.jpg.url" [alt]="item.jpg.name" />
-              </span>
-            </li>
-          </div>
-
+          <li *ngFor="let certificado of (individual$ | async)" class="certificate">
+            <span class="img">
+              <img [src]="certificado.img" [alt]="certificado.nombre" />
+              <div class="ver">
+                <a [href]="certificado.pdf" target="_blank">
+                  <i class="fa-solid fa-eye"></i>
+                </a>
+              </div>
+            </span>
+          </li>
         </ul>
       </div>
     </div>

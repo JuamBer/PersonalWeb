@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   tools: Tool[] = [
     {
       name: 'Visual Studio Code',
-      ability: 75
+      ability: 80
     },
     {
       name: 'Google Chrome',
@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
     },
     {
       name: 'Source Tree',
-      ability: 90
+      ability: 80
     },
     {
       name: 'Windows Terminal',
@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit {
     },
     {
       name: 'Angular',
-      ability: 70
+      ability: 80
     },
     {
       name: 'Ionic',
@@ -68,11 +68,35 @@ export class HomeComponent implements OnInit {
     },
     {
       name: 'Flutter',
-      ability: 45
+      ability: 40
     },
     {
       name: 'Regex',
       ability: 90
+    },
+    {
+      name: 'Spring Boot',
+      ability: 60
+    },
+    {
+      name: 'JavaScript ECMAScript 6+',
+      ability: 80
+    },
+    {
+      name: 'Typescript',
+      ability: 80
+    },
+    {
+      name: 'RXJS',
+      ability: 70
+    },
+    {
+      name: 'NGRX',
+      ability: 70
+    },
+    {
+      name: 'React',
+      ability: 30
     },
   ];
 

@@ -16,12 +16,12 @@ export class CertificacionService {
     return this.firestore.collection('certificados', ref => ref.where('type', '==', 'oficial')).valueChanges({ idField: 'id' }).pipe(map(x => x[0]),pluck('certificados'));
   }
 
-  getCertificacionesIndividuales() {
-    return this.firestore.collection('certificados', ref => ref.where('type', '==', 'individual')).valueChanges({ idField: 'id' });
+  getCertificacionesIndividuales(): Observable<any> {
+    return this.firestore.collection('certificados', ref => ref.where('type', '==', 'individual')).valueChanges({ idField: 'id' }).pipe(map(x => x[0]), pluck('certificados'));
   }
 
   getCertificacionesRuta() {
-    return this.firestore.collection('certificados', ref => ref.where('type', '==', 'rutas')).valueChanges({ idField: 'id' });
+    return this.firestore.collection('certificados', ref => ref.where('type', '==', 'rutas')).valueChanges({ idField: 'id' }).pipe(map(x => x[0]), pluck('rutas'));
   }
 
 }

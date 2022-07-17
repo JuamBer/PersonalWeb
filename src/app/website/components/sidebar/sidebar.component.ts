@@ -30,6 +30,21 @@ export class SidebarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+
+  openNav() {
+    const nav = document.getElementById("myNav");
+    if (nav){
+      nav.style.width = "100%";
+    }
+  }
+
+  closeNav() {
+    const nav = document.getElementById("myNav");
+    if (nav) {
+      nav.style.width = "0%";
+    }
   }
 
 }

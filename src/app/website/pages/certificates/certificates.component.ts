@@ -14,8 +14,8 @@ import { Certificate } from 'src/models/certificate.model';
 export class CertificatesComponent implements OnInit {
 
   formacionAcademica$: Observable<any> = this.certificateSrv.getCertificacionesOficiales();
-  items: any[] = [];
-  entities: Certificate[] = [];
+  rutas$: Observable<any> = this.certificateSrv.getCertificacionesRuta();
+  individual$: Observable<any> = this.certificateSrv.getCertificacionesIndividuales();
 
   constructor(
     private certificateSrv: CertificacionService

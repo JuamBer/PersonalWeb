@@ -12,11 +12,27 @@
       <span>Desarrollador De Aplicaciones Web</span>
     </div>
   </div>
-  <nav>
-    <ul>
-      <li *ngFor="let page of pages">
-        <a [routerLink]="'/'+page.page" routerLinkActive="active">{{page.name | titlecase}}</a>
-      </li>
-    </ul>
-  </nav>
+
+  <span class="hamburguesa" style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
+
+
+  <div class="container">
+    <div class="max-width">
+      <nav>
+        <ul>
+          <li *ngFor="let page of pages">
+            <a [routerLink]="'/'+page.page" routerLinkActive="active">{{page.name | titlecase}}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <a *ngFor="let page of pages" (click)="closeNav()" [routerLink]="'/'+page.page"
+      routerLinkActive="active">{{page.name | titlecase}}</a>
+  </div>
+</div>
