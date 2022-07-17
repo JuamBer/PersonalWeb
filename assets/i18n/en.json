@@ -1,0 +1,18 @@
+{
+  "home": {
+    "title": "Translation demo",
+    "text": "This is a simple demonstration app for ngx-translate"
+  },
+  "contact": {
+    "title": "Escríbeme Un Correo",
+    "rrss": "Redes Sociales"
+  },
+  "cv": {
+    "title": "Escríbeme Un Correo",
+    "button": "Descargar Currículum",
+    "info": "Desarcarga mi último currículum resumido en una página en formato pdf"
+  },
+  "hardware": {
+    "componentes": "Componenets"
+  }
+}
